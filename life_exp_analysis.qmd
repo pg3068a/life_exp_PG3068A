@@ -16,6 +16,8 @@ library(gapminder)
 
 Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 
+I am using gapminder data and creating a table that find the maximum life expectancy for each year and country.
+
 # Analysis
 
 ```{r}
