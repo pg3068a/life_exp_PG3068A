@@ -9,6 +9,7 @@ editor: visual
 
 ```{r}
 library(tidyverse)
+library(gapminder)
 ```
 
 # Abstract
@@ -16,3 +17,17 @@ library(tidyverse)
 Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 
 # Analysis
+
+```{r}
+gapdata<-gapminder::gapminder_unfiltered
+gapdata
+```
+
+```{r}
+sumdat<-gapdata %>%
+  group_by(year)%>%
+  filter(lifeExp==max(lifeExp))%>%
+  select(year,country,lifeExp)
+sumdat
+  
+```
